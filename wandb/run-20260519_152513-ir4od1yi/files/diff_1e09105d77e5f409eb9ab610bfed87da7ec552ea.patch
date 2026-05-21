@@ -1,0 +1,170 @@
+warning: in the working copy of 'DDQN.ipynb', LF will be replaced by CRLF the next time Git touches it
+diff --git a/DDQN.ipynb b/DDQN.ipynb
+index fc717f0..c6dcc75 100644
+--- a/DDQN.ipynb
++++ b/DDQN.ipynb
+@@ -2,7 +2,7 @@
+  "cells": [
+   {
+    "cell_type": "code",
+-   "execution_count": 1,
++   "execution_count": null,
+    "id": "04bb16f1",
+    "metadata": {},
+    "outputs": [],
+@@ -18,11 +18,17 @@
+     "import ale_py\n",
+     "import tensorflow as tf\n",
+     "from tensorflow.keras import layers\n",
++    "import wandb\n",
+     "\n",
+     "import torch\n",
+     "import torch.nn as nn\n",
+     "import torch.optim as optim\n",
+     "\n",
++    "from torch.distributions.categorical import Categorical\n",
++    "from torch.utils.tensorboard import SummaryWriter\n",
++    "from tqdm import tqdm\n",
++    "from typing import List\n",
++    "\n",
+     "\n",
+     "import subprocess, sys\n",
+     "\n",
+@@ -94,7 +100,54 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 2,
++   "execution_count": 6,
++   "id": "6c97cd7f",
++   "metadata": {},
++   "outputs": [
++    {
++     "name": "stderr",
++     "output_type": "stream",
++     "text": [
++      "\u001b[34m\u001b[1mwandb\u001b[0m: \u001b[33mWARNING\u001b[0m If you're specifying your api key in code, ensure this code is not shared publicly.\n",
++      "\u001b[34m\u001b[1mwandb\u001b[0m: \u001b[33mWARNING\u001b[0m Consider setting the WANDB_API_KEY environment variable, or running `wandb login` from the command line.\n",
++      "\u001b[34m\u001b[1mwandb\u001b[0m: [wandb.login()] Using explicit session credentials for https://api.wandb.ai.\n",
++      "\u001b[34m\u001b[1mwandb\u001b[0m: No netrc file found, creating one.\n",
++      "\u001b[34m\u001b[1mwandb\u001b[0m: Appending key for api.wandb.ai to your netrc file: C:\\Users\\acrab\\_netrc\n",
++      "\u001b[34m\u001b[1mwandb\u001b[0m: Currently logged in as: \u001b[33ma-crabtree\u001b[0m (\u001b[33ma-crabtree-maastricht-university\u001b[0m) to \u001b[32mhttps://api.wandb.ai\u001b[0m. Use \u001b[1m`wandb login --relogin`\u001b[0m to force relogin\n"
++     ]
++    },
++    {
++     "data": {
++      "text/plain": [
++       "True"
++      ]
++     },
++     "execution_count": 6,
++     "metadata": {},
++     "output_type": "execute_result"
++    }
++   ],
++   "source": [
++    "wandb.login(\"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\")"
++   ]
++  },
++  {
++   "cell_type": "code",
++   "execution_count": null,
++   "id": "d9876f8b",
++   "metadata": {},
++   "outputs": [],
++   "source": [
++    "config = {\n",
++    "    \"learning rate\": 1e-4,\n",
++    "    \"gamma\": 0.99,\n",
++    "    \"episodes\": 100,\n",
++    "}"
++   ]
++  },
++  {
++   "cell_type": "code",
++   "execution_count": 4,
+    "id": "aaa54075",
+    "metadata": {},
+    "outputs": [],
+@@ -106,7 +159,7 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": null,
+    "id": "48491bb5",
+    "metadata": {},
+    "outputs": [
+@@ -132,7 +185,7 @@
+     "T_net.load_state_dict(Q_net.state_dict())\n",
+     "T_net.eval()\n",
+     "\n",
+-    "optimizer = optim.Adam(Q_net.parameters(), lr=1e-4)\n",
++    "optimizer = optim.Adam(Q_net.parameters(), lr=config['learning rate'])\n",
+     "\n",
+     "#only run this one on first go\n",
+     "\n",
+@@ -222,7 +275,7 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 6,
++   "execution_count": null,
+    "id": "f5c2fde4",
+    "metadata": {},
+    "outputs": [
+@@ -266,7 +319,7 @@
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 7,
++   "execution_count": null,
+    "id": "98085373",
+    "metadata": {},
+    "outputs": [
+@@ -8714,16 +8767,26 @@
+    ],
+    "source": [
+     "replay_buffer = collections.deque(maxlen=100000)\n",
+-    "discount = 0.99\n",
++    "discount = config['gamma']\n",
+     "action_space = env.action_space\n",
+     "\n",
+     "\n",
++    "wandb.init(\n",
++    "            project=\"RL - Final Assignment\",\n",
++    "            entity=\"andrew-crabtree\",            # CHANGE THIS IF YOU ARE NOT DENNIS SOEMERS\n",
++    "            sync_tensorboard=True,\n",
++    "            config=config,\n",
++    "            name=\"DDQN\",\n",
++    "            monitor_gym=True,\n",
++    "            save_code=True,\n",
++    "        )\n",
+     "\n",
+     "\n",
+     "x = start_episode\n",
+     "\n",
+-    "for x in range(start_episode, start_episode + 8001):\n",
++    "for x in range(start_episode, start_episode + config['episodes']):\n",
+     "    eps = max(0.1, 1.0 - step_count / 100000)\n",
++    "    #eps = config['learning rate']\n",
+     "\n",
+     "    obs, info = env.reset()\n",
+     "    obs = process_obs(obs)\n",
+@@ -8791,12 +8854,14 @@
+     "                    Q_net, T_net, optimizer, \n",
+     "                    step_count, episode_rewards, train_losses, x)\n",
+     "print(f\"Checkpoint saved at episode {x}\")\n",
+-    "env.close()"
++    "env.close()\n",
++    "\n",
++    "wandb.finish()"
+    ]
+   },
+   {
+    "cell_type": "code",
+-   "execution_count": 8,
++   "execution_count": null,
+    "id": "3c711c30",
+    "metadata": {},
+    "outputs": [

@@ -1,0 +1,6 @@
+Episode 0, Reward: 150
+Episode 1, Reward: 700
+Episode 2, Reward: 300
+[34m[1mwandb[0m: [33mWARNING[0m Calling wandb.login() after wandb.init() has no effect.
+Warming up replay buffer...
+Warmup done — buffer size: 5000

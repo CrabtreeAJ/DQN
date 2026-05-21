@@ -1,0 +1,22 @@
+2026-05-19 16:00:31,873 INFO    MainThread:21160 [wandb_init.py:setup_run_log_directory():723] Logging user logs to c:\Users\acrab\OneDrive\Documents\GitHub\DQN\wandb\run-20260519_160031-fieef8sz\logs\debug.log
+2026-05-19 16:00:31,873 INFO    MainThread:21160 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to c:\Users\acrab\OneDrive\Documents\GitHub\DQN\wandb\run-20260519_160031-fieef8sz\logs\debug-internal.log
+2026-05-19 16:00:31,873 INFO    MainThread:21160 [wandb_init.py:init():851] calling init triggers
+2026-05-19 16:00:31,873 INFO    MainThread:21160 [wandb_init.py:init():856] wandb.init called with sweep_config: {}
+config: {'learning rate': 0.0001, 'gamma': 0.99, 'episodes': 10000, '_wandb': {'code_path': 'c:/Users/acrab/OneDrive/Documents/GitHub/DQN/DDQN.ipynb'}}
+2026-05-19 16:00:33,104 INFO    MainThread:21160 [wandb_init.py:init():899] starting backend
+2026-05-19 16:00:33,104 INFO    MainThread:21160 [wandb_init.py:init():914] sending inform_init request
+2026-05-19 16:00:33,327 INFO    MainThread:21160 [wandb_init.py:init():919] backend started and connected
+2026-05-19 16:00:33,329 INFO    MainThread:21160 [wandb_run.py:_label_probe_notebook():1262] probe notebook
+2026-05-19 16:00:33,329 INFO    MainThread:21160 [wandb_init.py:init():989] updated telemetry
+2026-05-19 16:00:33,384 INFO    MainThread:21160 [wandb_init.py:init():1012] communicating run to backend with 90.0 second timeout
+2026-05-19 16:00:33,917 INFO    MainThread:21160 [wandb_init.py:init():1057] starting run threads in backend
+2026-05-19 16:00:34,244 INFO    MainThread:21160 [wandb_run.py:_console_start():2509] atexit reg
+2026-05-19 16:00:34,244 INFO    MainThread:21160 [wandb_run.py:_redirect():2359] redirect: wrap_raw
+2026-05-19 16:00:34,245 INFO    MainThread:21160 [wandb_run.py:_redirect():2428] Wrapping output streams.
+2026-05-19 16:00:34,245 INFO    MainThread:21160 [wandb_run.py:_redirect():2451] Redirects installed.
+2026-05-19 16:00:34,248 INFO    MainThread:21160 [wandb_init.py:init():1095] run started, returning control to user process
+2026-05-19 16:02:20,420 INFO    MainThread:21160 [wandb_run.py:_finish():2271] finishing run a-crabtree-maastricht-university/RL - Final Assignment/fieef8sz
+2026-05-19 16:02:20,420 INFO    MainThread:21160 [wandb_run.py:_atexit_cleanup():2476] got exitcode: 0
+2026-05-19 16:02:20,420 INFO    MainThread:21160 [wandb_run.py:_restore():2458] restore
+2026-05-19 16:02:20,422 INFO    MainThread:21160 [wandb_run.py:_restore():2464] restore done
+2026-05-19 16:02:21,412 INFO    MainThread:21160 [wandb_run.py:_footer_sync_info():3877] logging synced files

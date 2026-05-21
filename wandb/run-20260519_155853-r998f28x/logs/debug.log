@@ -1,0 +1,38 @@
+2026-05-19 15:58:53,473 INFO    MainThread:21160 [wandb_init.py:setup_run_log_directory():723] Logging user logs to c:\Users\acrab\OneDrive\Documents\GitHub\DQN\wandb\run-20260519_155853-r998f28x\logs\debug.log
+2026-05-19 15:58:53,473 INFO    MainThread:21160 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to c:\Users\acrab\OneDrive\Documents\GitHub\DQN\wandb\run-20260519_155853-r998f28x\logs\debug-internal.log
+2026-05-19 15:58:53,475 INFO    MainThread:21160 [wandb_init.py:init():851] calling init triggers
+2026-05-19 15:58:53,475 INFO    MainThread:21160 [wandb_init.py:init():856] wandb.init called with sweep_config: {}
+config: {'learning rate': 0.0001, 'gamma': 0.99, 'episodes': 10000, '_wandb': {'code_path': 'c:/Users/acrab/OneDrive/Documents/GitHub/DQN/DDQN.ipynb'}}
+2026-05-19 15:58:55,363 WARNING MainThread:21160 [wandb_init.py:init():1605] [no run ID] interrupted
+Traceback (most recent call last):
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_init.py", line 1596, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_init.py", line 872, in init
+    self._wl.finish_all_active_runs()
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_setup.py", line 167, in finish_all_active_runs
+    run.finish()
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_run.py", line 329, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_run.py", line 374, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_run.py", line 2253, in finish
+    self._finish(exit_code)
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_run.py", line 329, in wrapper
+    return func(self, *args, **kwargs)
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_run.py", line 2287, in _finish
+    self._atexit_cleanup(exit_code=exit_code)
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_run.py", line 2487, in _atexit_cleanup
+    self._on_finish()
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\wandb_run.py", line 2744, in _on_finish
+    result = wait_with_progress(
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\mailbox\wait_with_progress.py", line 24, in wait_with_progress
+    return wait_all_with_progress(
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\mailbox\wait_with_progress.py", line 78, in wait_all_with_progress
+    return asyncer.run(progress_loop_with_timeout)
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 137, in run
+    return future.result()
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\concurrent\futures\_base.py", line 453, in result
+    self._condition.wait(timeout)
+  File "c:\Users\acrab\anaconda3\envs\RL\lib\threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt

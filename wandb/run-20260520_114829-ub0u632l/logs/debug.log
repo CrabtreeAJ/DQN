@@ -1,0 +1,27 @@
+2026-05-20 11:48:29,935 INFO    MainThread:20448 [wandb_init.py:setup_run_log_directory():723] Logging user logs to c:\Users\acrab\OneDrive\Documents\GitHub\DQN\wandb\run-20260520_114829-ub0u632l\logs\debug.log
+2026-05-20 11:48:29,935 INFO    MainThread:20448 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to c:\Users\acrab\OneDrive\Documents\GitHub\DQN\wandb\run-20260520_114829-ub0u632l\logs\debug-internal.log
+2026-05-20 11:48:29,935 INFO    MainThread:20448 [wandb_init.py:monkeypatch_ipython():642] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x0000028A13AB0070>
+2026-05-20 11:48:29,935 INFO    MainThread:20448 [wandb_init.py:init():851] calling init triggers
+2026-05-20 11:48:29,935 INFO    MainThread:20448 [wandb_init.py:init():856] wandb.init called with sweep_config: {}
+config: {'learning rate': 0.0001, 'gamma': 0.99, 'episodes': 10000, '_wandb': {'code_path': 'c:/Users/acrab/OneDrive/Documents/GitHub/DQN/DDQN.ipynb'}}
+2026-05-20 11:48:29,935 INFO    MainThread:20448 [wandb_init.py:init():899] starting backend
+2026-05-20 11:48:29,935 INFO    MainThread:20448 [wandb_init.py:init():914] sending inform_init request
+2026-05-20 11:48:30,340 INFO    MainThread:20448 [wandb_init.py:init():919] backend started and connected
+2026-05-20 11:48:30,342 INFO    MainThread:20448 [wandb_run.py:_label_probe_notebook():1262] probe notebook
+2026-05-20 11:48:30,343 INFO    MainThread:20448 [wandb_init.py:init():989] updated telemetry
+2026-05-20 11:48:30,382 INFO    MainThread:20448 [wandb_init.py:init():1012] communicating run to backend with 90.0 second timeout
+2026-05-20 11:48:31,364 INFO    MainThread:20448 [wandb_init.py:init():1057] starting run threads in backend
+2026-05-20 11:48:31,685 INFO    MainThread:20448 [wandb_run.py:_console_start():2509] atexit reg
+2026-05-20 11:48:31,685 INFO    MainThread:20448 [wandb_run.py:_redirect():2359] redirect: wrap_raw
+2026-05-20 11:48:31,685 INFO    MainThread:20448 [wandb_run.py:_redirect():2428] Wrapping output streams.
+2026-05-20 11:48:31,685 INFO    MainThread:20448 [wandb_run.py:_redirect():2451] Redirects installed.
+2026-05-20 11:48:31,686 INFO    MainThread:20448 [wandb_init.py:init():1095] run started, returning control to user process
+2026-05-20 22:26:57,419 INFO    MainThread:20448 [wandb_run.py:_finish():2271] finishing run a-crabtree-maastricht-university/RL - Final Assignment/ub0u632l
+2026-05-20 22:26:57,458 INFO    MainThread:20448 [jupyter.py:_save_ipynb():374] looking for notebook: c:\Users\acrab\OneDrive\Documents\GitHub\DQN\DDQN.ipynb
+2026-05-20 22:26:58,941 INFO    MainThread:20448 [wandb_run.py:_config_callback():1332] config_cb None None {'_wandb': {'code_path': 'source-RL_-_Final_Assignment-c__Users_acrab_OneDrive_Documents_GitHub_DQN_DDQN.ipynb'}}
+2026-05-20 22:26:58,942 INFO    MainThread:20448 [wandb_init.py:_jupyter_teardown():626] saved code and history: <Artifact source-RL_-_Final_Assignment-c__Users_acrab_OneDrive_Documents_GitHub_DQN_DDQN.ipynb>
+2026-05-20 22:26:58,942 INFO    MainThread:20448 [wandb_init.py:_jupyter_teardown():627] cleaning up jupyter logic
+2026-05-20 22:26:58,944 INFO    MainThread:20448 [wandb_run.py:_atexit_cleanup():2476] got exitcode: 0
+2026-05-20 22:26:58,946 INFO    MainThread:20448 [wandb_run.py:_restore():2458] restore
+2026-05-20 22:26:58,946 INFO    MainThread:20448 [wandb_run.py:_restore():2464] restore done
+2026-05-20 22:27:00,416 INFO    MainThread:20448 [wandb_run.py:_footer_sync_info():3877] logging synced files

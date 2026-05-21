@@ -1,0 +1,40 @@
+{
+  "os": "Windows-10-10.0.26200-SP0",
+  "python": "CPython 3.10.20",
+  "startedAt": "2026-05-19T14:12:46.393540Z",
+  "program": "c:\\Users\\acrab\\OneDrive\\Documents\\GitHub\\DQN\\DDQN.ipynb",
+  "codePath": "c:\\Users\\acrab\\OneDrive\\Documents\\GitHub\\DQN\\DDQN.ipynb",
+  "codePathLocal": "DDQN.ipynb",
+  "git": {
+    "remote": "https://github.com/CrabtreeAJ/DQN.git",
+    "commit": "1e09105d77e5f409eb9ab610bfed87da7ec552ea"
+  },
+  "email": "a.crabtree@student.maastrichtuniversity.nl",
+  "root": "c:\\Users\\acrab\\OneDrive\\Documents\\GitHub\\DQN",
+  "host": "Menace",
+  "executable": "c:\\Users\\acrab\\anaconda3\\envs\\RL\\python.exe",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1999391158272",
+      "used": "890639839232"
+    }
+  },
+  "memory": {
+    "total": "34273218560"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 5060 Ti",
+      "memoryTotal": "17103323136",
+      "cudaCores": 4608,
+      "architecture": "Blackwell",
+      "uuid": "GPU-a998118b-b512-1d35-2155-27e48e8a7d91"
+    }
+  ],
+  "cudaVersion": "13.2",
+  "writerId": "p5s6863299bgtelijzumhepufajak8am"
+}

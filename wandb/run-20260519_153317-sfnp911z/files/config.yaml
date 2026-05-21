@@ -1,0 +1,67 @@
+_wandb:
+    value:
+        cli_version: 0.27.0
+        code_path: c:/Users/acrab/OneDrive/Documents/GitHub/DQN/DDQN.ipynb
+        e:
+            pnsylai3yo5htapgyrvm6wnkvfbzi5xn:
+                codePath: c:\Users\acrab\OneDrive\Documents\GitHub\DQN\DDQN.ipynb
+                codePathLocal: DDQN.ipynb
+                cpu_count: 8
+                cpu_count_logical: 16
+                cudaVersion: "13.2"
+                disk:
+                    /:
+                        total: "1999391158272"
+                        used: "890616758272"
+                email: a.crabtree@student.maastrichtuniversity.nl
+                executable: c:\Users\acrab\anaconda3\envs\RL\python.exe
+                git:
+                    commit: 1e09105d77e5f409eb9ab610bfed87da7ec552ea
+                    remote: https://github.com/CrabtreeAJ/DQN.git
+                gpu: NVIDIA GeForce RTX 5060 Ti
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Blackwell
+                      cudaCores: 4608
+                      memoryTotal: "17103323136"
+                      name: NVIDIA GeForce RTX 5060 Ti
+                      uuid: GPU-a998118b-b512-1d35-2155-27e48e8a7d91
+                host: Menace
+                memory:
+                    total: "34273218560"
+                os: Windows-10-10.0.26200-SP0
+                program: c:\Users\acrab\OneDrive\Documents\GitHub\DQN\DDQN.ipynb
+                python: CPython 3.10.20
+                root: c:\Users\acrab\OneDrive\Documents\GitHub\DQN
+                startedAt: "2026-05-19T13:33:17.852277Z"
+                writerId: pnsylai3yo5htapgyrvm6wnkvfbzi5xn
+        m: []
+        python_version: 3.10.20
+        t:
+            "1":
+                - 1
+                - 2
+                - 3
+            "2":
+                - 1
+                - 2
+                - 3
+            "3":
+                - 2
+                - 13
+                - 16
+                - 34
+                - 35
+            "4": 3.10.20
+            "5": 0.27.0
+            "8":
+                - 1
+                - 3
+            "12": 0.27.0
+            "13": windows-amd64
+episodes:
+    value: 10000
+gamma:
+    value: 0.99
+learning rate:
+    value: 0.0001

@@ -1,0 +1,17 @@
+2026-05-19 16:16:24,103 INFO    MainThread:21160 [wandb_init.py:setup_run_log_directory():723] Logging user logs to c:\Users\acrab\OneDrive\Documents\GitHub\DQN\wandb\run-20260519_161624-wr8vury2\logs\debug.log
+2026-05-19 16:16:24,103 INFO    MainThread:21160 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to c:\Users\acrab\OneDrive\Documents\GitHub\DQN\wandb\run-20260519_161624-wr8vury2\logs\debug-internal.log
+2026-05-19 16:16:24,103 INFO    MainThread:21160 [wandb_init.py:init():851] calling init triggers
+2026-05-19 16:16:24,104 INFO    MainThread:21160 [wandb_init.py:init():856] wandb.init called with sweep_config: {}
+config: {'learning rate': 0.0001, 'gamma': 0.99, 'episodes': 10000, '_wandb': {'code_path': 'c:/Users/acrab/OneDrive/Documents/GitHub/DQN/DDQN.ipynb'}}
+2026-05-19 16:16:25,177 INFO    MainThread:21160 [wandb_init.py:init():899] starting backend
+2026-05-19 16:16:25,177 INFO    MainThread:21160 [wandb_init.py:init():914] sending inform_init request
+2026-05-19 16:16:25,429 INFO    MainThread:21160 [wandb_init.py:init():919] backend started and connected
+2026-05-19 16:16:25,431 INFO    MainThread:21160 [wandb_run.py:_label_probe_notebook():1262] probe notebook
+2026-05-19 16:16:25,432 INFO    MainThread:21160 [wandb_init.py:init():989] updated telemetry
+2026-05-19 16:16:25,490 INFO    MainThread:21160 [wandb_init.py:init():1012] communicating run to backend with 90.0 second timeout
+2026-05-19 16:16:25,843 INFO    MainThread:21160 [wandb_init.py:init():1057] starting run threads in backend
+2026-05-19 16:16:26,123 INFO    MainThread:21160 [wandb_run.py:_console_start():2509] atexit reg
+2026-05-19 16:16:26,123 INFO    MainThread:21160 [wandb_run.py:_redirect():2359] redirect: wrap_raw
+2026-05-19 16:16:26,123 INFO    MainThread:21160 [wandb_run.py:_redirect():2428] Wrapping output streams.
+2026-05-19 16:16:26,123 INFO    MainThread:21160 [wandb_run.py:_redirect():2451] Redirects installed.
+2026-05-19 16:16:26,124 INFO    MainThread:21160 [wandb_init.py:init():1095] run started, returning control to user process
